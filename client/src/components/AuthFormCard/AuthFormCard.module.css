@@ -1,5 +1,6 @@
 .card {
   background-color: #fff;
+  margin: 10rem 0;
   padding: 2.5rem;
   border-radius: 1rem;
   filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.03));
@@ -7,6 +8,7 @@
 
 .logo {
   width: 12rem;
+  margin: 0 auto;
 }
 
 .form {
@@ -14,6 +16,31 @@
 }
 
 .form h3 {
+  margin: 0;
   font-size: 1.2rem;
   font-weight: 600;
+  text-align: center;
+}
+
+.form p {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  text-align: center;
+  color: #b8b9be;
+}
+
+.form form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form form input {
+  padding: 0.5rem;
+}
+
+.form form button {
+  padding: 0.8rem;
 }
