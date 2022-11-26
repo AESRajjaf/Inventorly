@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Cors
 
-const whitelist = [process.env.FRONTEND_URL];
+const whitelist = [process.env.CLIENT_URL];
 
 const corsOptions = {
   origin: function (origin: any, callback: any) {
