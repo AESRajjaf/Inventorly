@@ -10,7 +10,21 @@ const app = express();
 app.use(express.json());
 
 // Cors
-app.use(cors());
+
+const whitelist = [process.env.FRONTEND_URL];
+
+const corsOptions = {
+  origin: function (origin: any, callback: any) {
+    if (whitelist.includes(origin)) {
+      // Puede consultar la API
+      callback(null, true);
+    } else {
+      callback(new Error("Error Cors"));
+    }
+  },
+};
+
+app.use(cors(corsOptions));
 
 // Router
 app.use(router);
