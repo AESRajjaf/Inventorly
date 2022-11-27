@@ -1,0 +1,64 @@
+.bar {
+  box-sizing: border-box;
+  border-right: 1px solid #d9d9d9;
+  width: 18rem;
+  height: 100vh;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo {
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.navLink {
+  box-sizing: border-box;
+  height: 3.6rem;
+  padding: 1rem 1.5rem;
+  background-color: #514af800;
+  color: #53545c;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.navLink:hover {
+  background-color: #514af815;
+  cursor: pointer;
+}
+
+.navLinkActive {
+  box-sizing: border-box;
+  height: 3.6rem;
+  padding: 1rem 1.5rem;
+  background-color: #514af8;
+  color: #ffffff;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navLink img,
+.navLinkActive img {
+  margin-right: 1.2rem;
+}
+
+.navLink span,
+.navLinkActive span {
+  font-family: Inter;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

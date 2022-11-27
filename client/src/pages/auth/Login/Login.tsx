@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className={styles.section}>
       <div className={styles.container}>
-        <AuthFormCard subtitle={subtitle} />
+        <AuthFormCard />
       </div>
     </div>
   );
