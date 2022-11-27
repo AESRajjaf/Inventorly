@@ -1,5 +1,5 @@
 import "dotenv/config";
-import express from "express";
+import express, { Request } from "express";
 import cors from "cors";
 import { router } from "./routes";
 import database from "./config/database";
@@ -11,20 +11,24 @@ app.use(express.json());
 
 // Cors
 
-const whitelist = [process.env.FRONTEND_URL];
+const allowlist = [process.env.CLIENT_URL, "http://127.0.0.1:5173/", "http://localhost:5173/"];
 
-const corsOptions = {
-  origin: function (origin: any, callback: any) {
-    if (whitelist.includes(origin)) {
-      // Puede consultar la API
-      callback(null, true);
-    } else {
-      callback(new Error("Error Cors"));
-    }
-  },
+const corsOptionsDelegate = (req: Request, callback: any) => {
+  let corsOptions;
+
+  let isDomainAllowed = allowlist.indexOf(req.header("Origin")) !== -1;
+
+  if (isDomainAllowed) {
+    // Enable CORS for this request
+    corsOptions = { origin: true };
+  } else {
+    // Disable CORS for this request
+    corsOptions = { origin: false };
+  }
+  callback(null, corsOptions);
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptionsDelegate));
 
 // Router
 app.use(router);
