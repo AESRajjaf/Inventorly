@@ -6,9 +6,13 @@
   filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.03));
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .logo {
-  width: 12rem;
-  margin: 0 auto;
+  width: 14rem;
 }
 
 .form {
@@ -17,30 +21,108 @@
 
 .form h3 {
   margin: 0;
-  font-size: 1.2rem;
+  color: #222222;
+  font-size: 1.25rem;
   font-weight: 600;
   text-align: center;
 }
 
 .form p {
-  margin: 0.6rem 0;
-  font-size: 1.05rem;
+  margin: 0.4rem 0;
+  font-size: 1rem;
   font-weight: 400;
   text-align: center;
-  color: #b8b9be;
+  color: #adaeb4;
 }
 
 .form form {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.form form input {
-  padding: 0.5rem;
+.inputGroup {
+  box-sizing: border-box;
+  padding: 0 1.2rem;
+  width: 23rem;
+  height: 3.25rem;
+  background-color: #f2f2f280;
+  border-radius: 0.6rem;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.form form button {
-  padding: 0.8rem;
+.inputGroup input {
+  background-color: #f2f2f200;
+  color: #abafb1;
+  border: none;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+.inputGroup input::placeholder {
+  color: #abafb1;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border: none;
+}
+
+.inputIcon {
+  margin-right: 0.6rem;
+}
+
+.passwordIcon {
+  margin-right: 0.2rem;
+  cursor: pointer;
+}
+
+.forgotPassword {
+  position: absolute;
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #8b8d97;
+  bottom: -2rem;
+  right: 0;
+}
+
+.registerLink {
+  text-decoration: none;
+  font-family: Inter;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #8b8d97;
+}
+
+.registerLink span {
+  font-weight: 500;
+  color: #222222;
+}
+
+.submitBtn {
+  box-sizing: border-box;
+  width: 11.25rem;
+  height: 3.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #514bf3;
+  color: #ffffff;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 300;
+  transition: 0.3s;
+  margin-top: 2.5rem;
+}
+
+.submitBtn:hover {
+  background-color: #3c37d0;
+  cursor: pointer;
 }
