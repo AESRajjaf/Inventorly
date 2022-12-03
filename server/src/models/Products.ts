@@ -4,12 +4,10 @@ interface ProductModel {
   name: string;
   description: string;
   pdtRef: string;
-  category: [
-    {
-      type: mongoose.Schema.Types.ObjectId;
-      ref: "Category";
-    }
-  ];
+  category: {
+    type: mongoose.Schema.Types.ObjectId;
+    ref: "Category";
+  };
   quantity: number;
   purchasePrice: number;
   sellingPrice: number;
@@ -37,12 +35,10 @@ const productSchema = new mongoose.Schema<ProductModel, {}, {}>(
       required: true,
       trim: true,
     },
-    category: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Category",
-      },
-    ],
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Category",
+    },
     quantity: {
       type: Number,
       required: true,

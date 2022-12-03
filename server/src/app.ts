@@ -4,20 +4,17 @@ import cors from "cors";
 import { router } from "./routes";
 import database from "./config/database";
 
-if(!process.env.JWT_SECRET) {
-  const err = new Error('No JWT_SECRET in env variable !');
-  console.log(err);
-}
-
 const PORT = process.env.PORT || 4001;
 
 const app = express();
 app.use(express.json());
 
 // Cors
-app.use(cors({
-  origin: [<string>process.env.CLIENT_URL]
-}));
+app.use(
+  cors({
+    origin: [<string>process.env.CLIENT_URL],
+  })
+);
 
 // Router
 app.use(router);
