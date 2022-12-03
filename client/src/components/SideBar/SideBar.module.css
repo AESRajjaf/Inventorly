@@ -35,6 +35,7 @@
 }
 
 .navLink:hover {
+  color: #514af8;
   background-color: #514af815;
   cursor: pointer;
 }
