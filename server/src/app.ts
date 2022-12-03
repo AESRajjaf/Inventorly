@@ -1,8 +1,13 @@
 import "dotenv/config";
-import express, { Request } from "express";
+import express from "express";
 import cors from "cors";
 import { router } from "./routes";
 import database from "./config/database";
+
+if(!process.env.JWT_SECRET) {
+  const err = new Error('No JWT_SECRET in env variable !');
+  console.log(err);
+}
 
 const PORT = process.env.PORT || 4001;
 
@@ -10,26 +15,9 @@ const app = express();
 app.use(express.json());
 
 // Cors
-
-const allowlist = [process.env.CLIENT_URL, "http://127.0.0.1:5173/", "http://localhost:5173/"];
-
-
-const corsOptionsDelegate = (req: Request, callback: any) => {
-  let corsOptions;
-
-  let isDomainAllowed = allowlist.indexOf(req.header("Origin")) !== -1;
-
-  if (isDomainAllowed) {
-    // Enable CORS for this request
-    corsOptions = { origin: true };
-  } else {
-    // Disable CORS for this request
-    corsOptions = { origin: false };
-  }
-  callback(null, corsOptions);
-};
-
-app.use(cors(corsOptionsDelegate));
+app.use(cors({
+  origin: [<string>process.env.CLIENT_URL, "http://127.0.0.1:5173", "http://localhost:5173"]
+}));
 
 // Router
 app.use(router);
