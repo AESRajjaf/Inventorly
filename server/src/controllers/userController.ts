@@ -48,6 +48,7 @@ const authenticate = async (req: Request, res: Response) => {
       name: user.name,
       email: user.email,
       token: generateJWT(user._id),
+      admin: user.admin
     });
   } else {
     const error = new Error("Contraseña incorrecta");

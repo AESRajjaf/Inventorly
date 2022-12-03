@@ -16,7 +16,7 @@ app.use(express.json());
 
 // Cors
 app.use(cors({
-  origin: [<string>process.env.CLIENT_URL, "http://127.0.0.1:5173", "http://localhost:5173"]
+  origin: [<string>process.env.CLIENT_URL]
 }));
 
 // Router
