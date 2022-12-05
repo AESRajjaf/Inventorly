@@ -4,10 +4,7 @@ interface ProductModel {
   name: string;
   description: string;
   pdtRef: string;
-  category: {
-    type: mongoose.Schema.Types.ObjectId;
-    ref: "Category";
-  };
+  category: object;
   quantity: number;
   purchasePrice: number;
   sellingPrice: number;
