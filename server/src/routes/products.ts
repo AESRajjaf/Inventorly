@@ -19,4 +19,3 @@ router
   .delete(checkAuth, deleteProduct);
 
 export { router };
-
