@@ -16,6 +16,13 @@
   width: 100%;
 }
 
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
@@ -35,6 +42,7 @@
 }
 
 .navLink:hover {
+  color: #514af8;
   background-color: #514af815;
   cursor: pointer;
 }
@@ -60,5 +68,92 @@
 .navLinkActive span {
   font-family: Inter;
   font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.linksGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contactLink {
+  background-color: #53545c18;
+  color: #111111;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.contactLink:hover {
+  background-color: #53545c30;
+  cursor: pointer;
+}
+
+.contactLink img {
+  margin-right: 0.8rem;
+}
+
+.contactLink span {
+  font-family: Inter;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.standardPlan {
+  background-color: #ff9d2d25;
+  color: #111111;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.standardPlan:hover {
+  background-color: #ff9d2d45;
+  cursor: pointer;
+}
+
+.standardPlan img {
+  margin-right: 0.8rem;
+}
+
+.standardPlan span {
+  font-family: Inter;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.logout {
+  background-color: #ff2d2d15;
+  color: #ff2d2d;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1rem;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.logout:hover {
+  background-color: #ff2d2d25;
+  cursor: pointer;
+}
+
+.logout img {
+  margin-right: 0.8rem;
+}
+
+.logout span {
+  font-family: Inter;
+  font-size: 0.85rem;
   font-weight: 500;
 }
