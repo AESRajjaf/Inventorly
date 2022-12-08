@@ -1,15 +1,20 @@
 // SideBar Components
+import { Link } from "react-router-dom";
+
+// Icons Import
 import Logo from "../../assets/Logo_2.svg";
 import CategoryIcon from "../../assets/Icons/Category.svg";
 import OrdersIcon from "../../assets/Icons/Orders.svg";
 import ClientsIcon from "../../assets/Icons/Clients.svg";
-import InventoryIcon from "../../assets/Icons/Inventory.svg";
+import StockIcon from "../../assets/Icons/Stock.svg";
 import ProvidersIcon from "../../assets/Icons/Providers.svg";
 import EmployeesIcon from "../../assets/Icons/Employees.svg";
 import SettingsIcon from "../../assets/Icons/Setting.svg";
 import SupportHeadphonesIcon from "../../assets/Icons/SupportHeadphones.svg";
 import GiftIcon from "../../assets/Icons/Gift.svg";
 import LogoutIcon from "../../assets/Icons/Logout.svg";
+
+// Styles Import
 import styles from "./SideBar.module.css";
 
 const SideBar = () => {
@@ -18,34 +23,34 @@ const SideBar = () => {
       <img className={styles.logo} src={Logo} />
       <div className={styles.content}>
         <div className={styles.navigation}>
-          <div className={styles.navLinkActive}>
+          <Link to={"/"} className={styles.navLinkActive}>
             <img src={CategoryIcon} />
             <span>Dashboard</span>
-          </div>
-          <div className={styles.navLink}>
+          </Link>
+          <Link to={"/orders"} className={styles.navLink}>
             <img src={OrdersIcon} />
             <span>Pedidos</span>
-          </div>
-          <div className={styles.navLink}>
+          </Link>
+          <Link to={"/clients"} className={styles.navLink}>
             <img src={ClientsIcon} />
             <span>Clientes</span>
-          </div>
-          <div className={styles.navLink}>
-            <img src={InventoryIcon} />
+          </Link>
+          <Link to={"/stock"} className={styles.navLink}>
+            <img src={StockIcon} />
             <span>Inventario</span>
-          </div>
-          <div className={styles.navLink}>
+          </Link>
+          <Link to={"/providers"} className={styles.navLink}>
             <img src={ProvidersIcon} />
             <span>Proveedores</span>
-          </div>
-          <div className={styles.navLink}>
+          </Link>
+          <Link to={"/employees"} className={styles.navLink}>
             <img src={EmployeesIcon} />
             <span>Empleados</span>
-          </div>
-          <div className={styles.navLink}>
+          </Link>
+          <Link to={"/settings"} className={styles.navLink}>
             <img src={SettingsIcon} />
             <span>Ajustes</span>
-          </div>
+          </Link>
         </div>
         <div className={styles.actions}>
           <div className={styles.linksGroup}>
