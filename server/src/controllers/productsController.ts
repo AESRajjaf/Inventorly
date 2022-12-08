@@ -82,7 +82,9 @@ const deleteProduct = async (req: Request, res: Response) => {
   try {
     await product.deleteOne();
     res.json({ msg: "El producto ha sido eliminado correctamente" });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export { getProducts, getProduct, addProduct, editProduct, deleteProduct };
