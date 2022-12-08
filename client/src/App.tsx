@@ -7,8 +7,17 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/*Authentification*/}
         <Route path="/login" element={<Login />} />
+
+        {/*Pages*/}
+        <Route path="/" element={<Home />} />
+        <Route path="/orders" element={<Login />} />
+        <Route path="/clients" element={<Login />} />
+        <Route path="/stock" element={<Login />} />
+        <Route path="/providers" element={<Login />} />
+        <Route path="/employees" element={<Login />} />
+        <Route path="/settings" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
