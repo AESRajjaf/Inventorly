@@ -1,5 +1,6 @@
 // Content Component
 import React from "react";
+import TopBar from "../TopBar/TopBar";
 
 interface Props {
   children: React.ReactNode;
@@ -12,11 +13,17 @@ const Content = ({ children }: Props) => {
         height: "100vh",
         flex: "1",
         boxSizing: "border-box",
-        padding: "2rem 2rem",
         overflowY: "scroll",
       }}
     >
-      {children}
+      <TopBar />
+      <div
+        style={{
+          padding: "2rem 2rem",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };

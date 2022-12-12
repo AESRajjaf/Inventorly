@@ -62,16 +62,22 @@
   background-color: #f0f0f0;
 }
 
-.delete {
+.select select {
+  all: unset;
+}
+
+.select {
   padding: 0.6rem 0.7rem 0.5rem;
   background-color: #f7f7f7;
   border-radius: 0.6rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: 0.2s;
+  display: flex;
+  gap: 0.6rem;
 }
 
-.delete:hover {
+.select:hover {
   background-color: #f0f0f0;
 }
 
@@ -98,6 +104,10 @@
 
 .colZero {
   width: 4rem;
+}
+
+.colZero input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .colOne {

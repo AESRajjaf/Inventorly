@@ -3,7 +3,7 @@
 // Icons Import
 import SearchIcon from "../../assets/Icons/Search.svg";
 import FilterIcon from "../../assets/Icons/Filter.svg";
-import DeleteIcon from "../../assets/Icons/Delete.svg";
+import ChevronBottomIcon from "../../assets/Icons/ChevronBottom.svg";
 import SortIcon from "../../assets/Icons/Sort.svg";
 
 // Styles Import
@@ -71,8 +71,11 @@ const ListCard = () => {
               Filtro
             </button>
           </div>
-          <div className={styles.delete}>
-            <img src={DeleteIcon} />
+          <div className={styles.select}>
+            <select>
+              <option value="0">Accion seleccionada</option>
+            </select>
+            <img src={ChevronBottomIcon} />
           </div>
         </div>
         <div className={styles.row}>
@@ -118,7 +121,7 @@ const ListCard = () => {
             </div>
             <div className={styles.colTwo}>{product.category}</div>
             <div className={styles.colThree}>{product.purchasePrice} €</div>
-            <div className={styles.colFour}>{product.quantity}</div>
+            <div className={styles.colFour}>{product.quantity} Uds.</div>
             <div className={styles.colFive}>
               {product.purchasePrice * product.quantity} €
             </div>
