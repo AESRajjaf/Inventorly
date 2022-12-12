@@ -52,7 +52,7 @@ const editProduct = async (req: Request, res: Response) => {
   product.name = req.body.name || product.name;
   product.pdtRef = req.body.pdtRef || product.pdtRef;
   product.description = req.body.description || product.description;
-  product.category = req.body.category || product.category;
+  product.categories = req.body.categories || product.categories;
   product.quantity = req.body.quantity || product.quantity;
   product.purchasePrice = req.body.purchasePrice || product.purchasePrice;
   product.sellingPrice = req.body.sellingPrice || product.sellingPrice;
