@@ -1,0 +1,163 @@
+.card {
+  width: "100%";
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.listBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+
+.searchBar:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.searchBar input {
+  all: unset;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter:hover {
+  background-color: #f0f0f0;
+}
+
+.delete {
+  padding: 0.6rem 0.7rem 0.5rem;
+  background-color: #f7f7f7;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete:hover {
+  background-color: #f0f0f0;
+}
+
+.row {
+  display: flex;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #2c2d33;
+  padding: 1.4rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rows {
+  display: flex;
+  align-items: center;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #2c2d3390;
+  padding: 1rem 0;
+}
+
+.colZero {
+  width: 4rem;
+}
+
+.colOne {
+  width: 18rem;
+  display: flex;
+  align-items: center;
+}
+
+.colTwo {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+}
+
+.colThree {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.colFour {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+}
+
+.colFive {
+  width: 14rem;
+  display: flex;
+  align-items: center;
+}
+
+.colSix {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.colSeven {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+}
+
+.rows .status {
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  border-radius: 0.8rem;
+}
+
+.icon {
+  margin-left: 0.8rem;
+}
+
+.productImg {
+  margin-right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  padding: 0.2rem 0;
+}
