@@ -1,6 +1,9 @@
 //ListCard Component
 
 // Icons Import
+import SearchIcon from "../../assets/Icons/Search.svg";
+import FilterIcon from "../../assets/Icons/Filter.svg";
+import DeleteIcon from "../../assets/Icons/Delete.svg";
 import SortIcon from "../../assets/Icons/Sort.svg";
 
 // Styles Import
@@ -57,6 +60,21 @@ const ListCard = () => {
   return (
     <div className={styles.card}>
       <div className={styles.table}>
+        <div className={styles.listBar}>
+          <div className={styles.filters}>
+            <div className={styles.searchBar}>
+              <img src={SearchIcon} />
+              <input type="text" placeholder="Buscar Productos" />
+            </div>
+            <button className={styles.filter}>
+              <img src={FilterIcon} />
+              Filtro
+            </button>
+          </div>
+          <div className={styles.delete}>
+            <img src={DeleteIcon} />
+          </div>
+        </div>
         <div className={styles.row}>
           <div className={styles.colZero}>
             <input type="checkbox" />

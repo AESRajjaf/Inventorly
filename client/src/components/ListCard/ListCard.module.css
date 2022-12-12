@@ -12,6 +12,69 @@
   flex-direction: column;
 }
 
+.listBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+}
+
+.searchBar:hover {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.searchBar input {
+  all: unset;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter:hover {
+  background-color: #f0f0f0;
+}
+
+.delete {
+  padding: 0.6rem 0.7rem 0.5rem;
+  background-color: #f7f7f7;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete:hover {
+  background-color: #f0f0f0;
+}
+
 .row {
   display: flex;
   font-family: Inter;
@@ -25,6 +88,7 @@
 
 .rows {
   display: flex;
+  align-items: center;
   font-family: Inter;
   font-weight: 400;
   font-size: 0.85rem;
