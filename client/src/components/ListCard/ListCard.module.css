@@ -106,10 +106,6 @@
   width: 4rem;
 }
 
-.colZero input {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 .colOne {
   width: 18rem;
   display: flex;

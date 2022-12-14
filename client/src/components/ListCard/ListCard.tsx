@@ -1,4 +1,5 @@
 //ListCard Component
+import { useState } from "react";
 
 // Icons Import
 import SearchIcon from "../../assets/Icons/Search.svg";
@@ -8,6 +9,7 @@ import SortIcon from "../../assets/Icons/Sort.svg";
 
 // Styles Import
 import styles from "./ListCard.module.css";
+import CheckBox from "../CheckBox/CheckBox";
 
 const data = [
   {
@@ -18,7 +20,7 @@ const data = [
     quantity: 45,
     descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
     image: "Photo.png",
-    pdtRef: "456456456",
+    pdtRef: "46523153",
     status: "Publicado",
   },
   {
@@ -29,7 +31,7 @@ const data = [
     quantity: 85,
     descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
     image: "Photo.png",
-    pdtRef: "456456456",
+    pdtRef: "14646123168",
     status: "Publicado",
   },
   {
@@ -40,7 +42,7 @@ const data = [
     quantity: 45,
     descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
     image: "Photo.png",
-    pdtRef: "456456456",
+    pdtRef: "469866456",
     status: "En borrador",
   },
   {
@@ -51,12 +53,16 @@ const data = [
     quantity: 45,
     descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
     image: "Photo.png",
-    pdtRef: "456456456",
+    pdtRef: "4665696456",
     status: "En borrador",
   },
 ];
 
 const ListCard = () => {
+  const [selectAll, setSelectAll] = useState<string>("false");
+
+  // console.log(selectAll);
+
   return (
     <div className={styles.card}>
       <div className={styles.table}>
@@ -80,7 +86,7 @@ const ListCard = () => {
         </div>
         <div className={styles.row}>
           <div className={styles.colZero}>
-            <input type="checkbox" />
+            <CheckBox setSelectAll={setSelectAll} />
           </div>
           <div className={styles.colOne}>
             Nombre del producto <img src={SortIcon} className={styles.icon} />
@@ -106,9 +112,9 @@ const ListCard = () => {
         </div>
 
         {data.map((product) => (
-          <div className={styles.rows}>
+          <div key={product.pdtRef} className={styles.rows}>
             <div className={styles.colZero}>
-              <input type="checkbox" />
+              <CheckBox selectAll={selectAll} />
             </div>
             <div className={styles.colOne}>
               <img
