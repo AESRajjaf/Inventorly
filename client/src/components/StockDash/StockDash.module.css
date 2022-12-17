@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #e8e8e8;
+  box-sizing: border-box;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.7rem;
+  background-color: #ffffff16;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+}

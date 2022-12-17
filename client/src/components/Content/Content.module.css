@@ -1,0 +1,20 @@
+.container {
+  height: 100vh;
+  flex: 1;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.topBar {
+  position: fixed;
+  width: 84.1vw;
+  background-color: #fff;
+}
+
+.content {
+  margin-top: 5.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
