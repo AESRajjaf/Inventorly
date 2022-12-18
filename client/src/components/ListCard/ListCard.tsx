@@ -98,7 +98,7 @@ const data = [
     descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
     image: "Photo.png",
     pdtRef: "96284563",
-    status: "En borrador",
+    status: "Publicado",
   },
   {
     name: "Reloj W566",
@@ -111,23 +111,10 @@ const data = [
     pdtRef: "486556",
     status: "En borrador",
   },
-  {
-    name: "Pantalon",
-    category: "Ropa",
-    purchasePrice: 94.99,
-    sellingPrice: 104.99,
-    quantity: 45,
-    descritpion: "Lorem ipsum nose que decir aqui descripcion del producto",
-    image: "Photo.png",
-    pdtRef: "98856",
-    status: "En borrador",
-  },
 ];
 
 const ListCard = () => {
   const [selectAll, setSelectAll] = useState<string>("false");
-
-  // console.log(selectAll);
 
   return (
     <div className={styles.card}>
@@ -212,6 +199,31 @@ const ListCard = () => {
             </div>
           </div>
         ))}
+        <div className={styles.pagination}>
+          <div className={styles.items}>
+            <select className={styles.select}>
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="50">50</option>
+              <option value="80">80</option>
+            </select>
+            <label className={styles.label}>Items por página</label>
+            <span className={styles.total}>1-10 de 200 productos</span>
+          </div>
+          <div className={styles.pages}>
+            <select className={styles.select}>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <label className={styles.label}>página de 6</label>
+            <span className={styles.total}>{"<  >"}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

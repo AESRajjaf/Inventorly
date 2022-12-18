@@ -1,15 +1,24 @@
 // TopBar Component
 import styles from "./TopBar.module.css";
 
+import DashboardIcon from "../../assets/Icons/Dashboard.svg";
 import StockIcon from "../../assets/Icons/Stock.svg";
 import NotificationIcon from "../../assets/Icons/Notification.svg";
 
-const TopBar = () => {
+interface Props {
+  page: string;
+}
+
+const TopBar = ({ page }: Props) => {
   return (
     <div className={styles.topBar}>
       <h2>
-        <img src={StockIcon} />
-        Inventario
+        <img src={page === "Dashboard" ? DashboardIcon : StockIcon} />
+        {page === "Dashboard"
+          ? page
+          : page === "Stock"
+          ? "Inventario"
+          : "Not Found"}
       </h2>
       <div className={styles.rightSide}>
         <input type="text" placeholder="Buscar..." />

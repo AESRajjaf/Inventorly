@@ -8,10 +8,12 @@ import StockDash from "../../../components/StockDash/StockDash";
 import styles from "./Stock.module.css";
 
 const Stock = () => {
+  const page = "Stock";
+
   return (
     <main className={styles.main}>
-      <SideBar />
-      <Content>
+      <SideBar page={page} />
+      <Content page={page}>
         <StockDash />
         <ListCard />
       </Content>
